@@ -1,4 +1,4 @@
-# ── Etapa 1: Build ───────────────────────────────────────────────────────────
+# ── Etapa 1: Build
 FROM node:20-alpine AS builder
 
 WORKDIR /app
@@ -9,7 +9,7 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-# ── Etapa 2: Producción ───────────────────────────────────────────────────────
+# ── Etapa 2: Producción
 FROM node:20-alpine AS production
 
 WORKDIR /app

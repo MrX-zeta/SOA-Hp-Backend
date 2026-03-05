@@ -7,9 +7,12 @@ import { HousesModule } from './modules/houses/houses.module';
 import { SpellsModule } from './modules/spells/spells.module';
 import { CharacterHouseModule } from './modules/character-house/character-house.module';
 import { HealthModule } from './modules/health/health.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
+    
     // Capa de integración (Facade) — se importa primero
     HpApiModule,
 

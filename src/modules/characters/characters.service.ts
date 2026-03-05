@@ -3,11 +3,6 @@ import { HpApiService } from '../../integration/hp-api/hp-api.service';
 import { CharacterDto } from './dto/character.dto';
 import { HpApiCharacter } from '../../common/interfaces/hp-api.interface';
 
-/**
- * CharactersService — Servicio SOA de personajes.
- * Responsabilidad: obtener y transformar personajes al contrato CharacterDto.
- * No conoce la HP API directamente; delega en HpApiService (Facade).
- */
 @Injectable()
 export class CharactersService {
   constructor(private readonly hpApiService: HpApiService) {}
@@ -28,7 +23,7 @@ export class CharactersService {
     return this.toDto(character);
   }
 
-  // ── Mapper: HpApiCharacter → CharacterDto ─────────────────────────────
+  // ── Mapper: HpApiCharacter → CharacterDto
   toDto(raw: HpApiCharacter): CharacterDto {
     return {
       id:              raw.id,

@@ -20,7 +20,7 @@ export class CharacterHouseService {
       );
     }
 
-    // Obtener miembros de su casa (HousesService lo resuelve)
+    // Obtener miembros de su casa
     const houseMembers = await this.housesService.findByHouse(
       character.house.toLowerCase() as HouseName,
     );

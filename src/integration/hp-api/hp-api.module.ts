@@ -6,7 +6,7 @@ import { HpApiService } from './hp-api.service';
 @Module({
   imports: [
     HttpModule.register({
-      timeout: 10000,   // 10 segundos máximo de espera
+      timeout: 10000,
       maxRedirects: 3,
     }),
   ],
