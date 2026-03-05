@@ -29,14 +29,6 @@ src/
 npm install
 ```
 
-## Variables de entorno
-
-Copia `.env.example` a `.env`:
-
-```bash
-cp .env.example .env
-```
-
 ## Desarrollo
 
 ```bash
@@ -56,7 +48,3 @@ npm run start:prod
 docker build -t soa-backend .
 docker run -p 3000:3000 --env-file .env soa-backend
 ```
-
-## Swagger UI
-
-Una vez corriendo: [http://localhost:3000/api/docs](http://localhost:3000/api/docs)
